@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'transact_app/home'
+  get 'transact_app/help'
+  get 'transact_app/about'
+  root :to => "transact_app#home"
 end
