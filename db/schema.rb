@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_152333) do
+ActiveRecord::Schema.define(version: 2021_01_23_105944) do
 
   create_table "group_transactions", force: :cascade do |t|
     t.integer "group_id", null: false
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_01_20_152333) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "group_transactions", "groups"
