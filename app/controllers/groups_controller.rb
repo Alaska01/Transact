@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
     
       def show
         @group = Group.find(params[:id])
-        @logs = @group.logs.includes(:author).paginate(page: params[:page], per_page: 15)
+        # @logs = @group.logs.includes(:author).paginate(page: params[:page], per_page: 15)
       end
     
       private
