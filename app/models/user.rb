@@ -10,6 +10,7 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { minimum: 6 }
 
     has_many :groups
+    has_many :transactions, foreign_key: :author_id
 
     # Returns the hash digest of the given string.
     def User.digest(string)

@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources   :groups, only: [:index, :new, :create, :show]
+
+  resources   :transactions, only: [:index, :individual, :new, :create]
+  get         '/individual',    to:   'transactions#individual'
 end
