@@ -1,0 +1,19 @@
+<% provide(:title, 'Individual Amount') %>
+
+<% @logs.each do |log| %>
+
+<div class="group-div">
+<div>
+<h3><strong><%= log.name %></strong></h3>
+<p><small>Created At: <%= log.created_at.strftime("%d-%m-%y") %></small></p>
+<h5><strong>Money Spent: <%= hours(log) %> dollars </strong></h5>
+</div>
+<%= group_img(log.groups.first) unless log.groups.first.nil?%>
+<%= link_to "View Group", group_path(log.groups.first) unless log.groups.first.nil? %>
+</div>
+<% end %>
+
+<div class="create-group">
+<%= link_to "Create New Transaction", new_log_path, class: "create-group-link"%>
+</div>
+<div class="create-pad"></div>

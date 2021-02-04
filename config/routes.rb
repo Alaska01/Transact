@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'transact_app#home'
   get 'users/new'
   get 'transact_app/home'
-  get 'transact_app/help'
+  get '/profile', to: 'transact_app#profile'
   get 'transact_app/about'
   
   get '/signup', to: 'users#new'
@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   resources   :groups, only: [:index, :new, :create, :show]
 
-  resources   :transactions, only: [:index, :individual, :new, :create]
-  get         '/individual',    to:   'transactions#individual'
+  resources   :logs, only: [:index, :individual, :new, :create]
+  get         '/individual',    to:   'logs#individual'
 end

@@ -2,7 +2,7 @@ class TransactAppController < ApplicationController
   def home
   end
 
-  def help
+  def profile
   end
 
   def about

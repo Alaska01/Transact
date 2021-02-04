@@ -100,3 +100,9 @@ input, textarea, select, .uneditable-input {
         }
         }
     }
+
+    .group-image {
+        width: 200px;
+        height: 100px;
+        object-fit: cover;
+      }

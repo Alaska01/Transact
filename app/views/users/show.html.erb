@@ -3,3 +3,9 @@
 <%= gravatar_for @user %>
     <%= @user.name%>
 </h1>
+<p>
+<li><%= link_to "All My Transactions", logs_path %></li>
+<li><%= link_to "All my external transactions", individual_path %></li>
+<li><%= link_to "All groups", groups_path %></li>
+
+</p>

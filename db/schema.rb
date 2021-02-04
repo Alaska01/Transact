@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_02_204331) do
+ActiveRecord::Schema.define(version: 2021_02_03_124039) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -48,22 +48,22 @@ ActiveRecord::Schema.define(version: 2021_02_02_204331) do
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
-  create_table "transaction_groups", force: :cascade do |t|
+  create_table "log_groups", force: :cascade do |t|
     t.integer "group_id", null: false
-    t.integer "transaction_id", null: false
+    t.integer "log_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["group_id"], name: "index_transaction_groups_on_group_id"
-    t.index ["transaction_id"], name: "index_transaction_groups_on_transaction_id"
+    t.index ["group_id"], name: "index_log_groups_on_group_id"
+    t.index ["log_id"], name: "index_log_groups_on_log_id"
   end
 
-  create_table "transactions", force: :cascade do |t|
+  create_table "logs", force: :cascade do |t|
     t.integer "author_id"
     t.string "name"
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["author_id"], name: "index_transactions_on_author_id"
+    t.index ["author_id"], name: "index_logs_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -80,6 +80,6 @@ ActiveRecord::Schema.define(version: 2021_02_02_204331) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "groups", "users"
-  add_foreign_key "transaction_groups", "groups"
-  add_foreign_key "transaction_groups", "transactions"
+  add_foreign_key "log_groups", "groups"
+  add_foreign_key "log_groups", "logs"
 end

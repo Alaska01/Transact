@@ -4,8 +4,8 @@ class Group < ApplicationRecord
                    uniqueness: { case_sensitive: true }
   validates :user_id, presence: true
   has_many :groups, dependent: :destroy
-  has_many :transaction_groups
-  has_many :transactions, through: :transaction_groups
+  has_many :log_groups
+  has_many :logs, through: :log_groups
   has_one_attached :image
 
   def display_image
