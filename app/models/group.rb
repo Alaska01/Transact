@@ -3,7 +3,7 @@ class Group < ApplicationRecord
   validates :name, presence: true, length: { maximum: 15, minimum: 5 },
                    uniqueness: { case_sensitive: true }
   validates :user_id, presence: true
-  has_many :groups, dependent: :destroy
+  # has_many :groups, dependent: :destroy
   has_many :log_groups
   has_many :logs, through: :log_groups
   has_one_attached :image
