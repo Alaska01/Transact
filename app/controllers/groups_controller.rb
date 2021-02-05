@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.build(group_params)
-        @group.image.attach(params[:group][:image])
+    @group.image.attach(params[:group][:image])
     if @group.save
       flash[:success] = 'Your group has been created.'
       redirect_to groups_path
@@ -21,7 +21,6 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-  
   end
 
   private

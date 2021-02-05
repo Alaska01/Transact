@@ -13,6 +13,6 @@ RSpec.describe Log, type: :model do
       should validate_numericality_of(:amount)
         .is_greater_than(0)
     end
-    it { should validate_numericality_of(:amount)  }
+    it { should validate_numericality_of(:amount) }
   end
 end
