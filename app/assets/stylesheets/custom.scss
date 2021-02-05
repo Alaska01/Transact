@@ -3,106 +3,112 @@
 
 /* mixins, variables, etc. */
 $gray-medium-light: #eaeaea;
+
 @mixin box_sizing {
--moz-box-sizing:
-border-box;
--webkit-box-sizing: border-box;
-box-sizing:
-border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/*universal */
+/* universal */
 .header-color {
-    background-color: #3778c2;
+  background-color: #3778c2;
 }
 
 body {
-padding-top: 60px;
+  padding-top: 60px;
 }
 
 section {
-overflow: auto;
-}
-textarea {
-resize: vertical;
-}
-.center {
-text-align: center;
-}
-.center h1 {
-margin-bottom: 10px;
+  overflow: auto;
 }
 
-body {
-    padding-top: 60px;
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
 }
 
 /* footer */
+
 footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: #777;
-    background-color: #5fb523;
-    height: 100px;
-    width: 100%;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  background-color: #5fb523;
+  height: 100px;
+  width: 100%;
 }
 
 footer a {
-    color: #555;
+  color: #555;
 }
 
 footer a:hover {
-    color: #222;
+  color: #222;
 }
 
 footer small {
-    float: left;
+  float: left;
 }
 
 footer ul {
-    float: right;
-    list-style: none;
+  float: right;
+  list-style: none;
 }
 
 footer ul li {
-    float: left;
-    margin-left: 15px;
+  float: left;
+  margin-left: 15px;
 }
 
 /* forms */
-input, textarea, select, .uneditable-input {
-    border: 1px solid #bbb;
-    width: 100%;
-    margin-bottom: 15px;
-    @include box_sizing;
-    }
-    input {
-    height: auto !important;
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+@media (max-width: 800px) {
+  footer {
+    margin-left: 0;
+
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
     }
 
-    @media (max-width: 800px) {
-        
-    footer {
-        margin-left: 0;
-        small {
-        display: block;
-        float: none;
-        margin-bottom: 1em;
-        }
-        ul {
-        float: none;
-        padding: 0;
-        li {
-        float: none;
-        margin-left: 0;
-        }
-        }
-        }
-    }
+    ul {
+      float: none;
+      padding: 0;
 
-    .group-image {
-        width: 200px;
-        height: 100px;
-        object-fit: cover;
+      li {
+        float: none;
+        margin-left: 0;
       }
+    }
+  }
+}
+
+.group-image {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+}
