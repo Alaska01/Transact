@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'hirb'
 gem 'rails', '6.1.0'
 gem 'rubocop', '~>0.81.0'
-# gem 'devise'
+gem 'devise'
 gem 'active_storage_validations', '0.8.9'
 gem 'bcrypt', '3.1.13'
 gem 'bootsnap', '1.4.6', require: false
@@ -40,7 +40,7 @@ group :test do
   gem 'minitest', '5.11.3'
   gem 'minitest-reporters', '1.3.8'
   gem 'rails-controller-testing', '1.0.4'
-  # gem 'rspec-rails', '~> 4.0.2'
+ 
   gem 'selenium-webdriver', '3.142.7'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'webdrivers', '4.3.0'
