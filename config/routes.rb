@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
   root 'transact_app#home'
-  get 'users/new'
-  get 'transact_app/home'
+  # get 'users/new'
+  # get 'transact_app/home'
   get '/profile', to: 'transact_app#profile'
   get 'transact_app/about'
   
