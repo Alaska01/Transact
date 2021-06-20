@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe GroupsController, type: :controller do
   describe 'GET #index' do
     before do
-      User.create(name: 'kalu')
+      User.create(name: 'aye')
       session[:author_id] = 1
       get :index
     end

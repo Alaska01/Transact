@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe LogsController, type: :controller do
   describe 'GET #index' do
     before do
-      User.create(name: 'kalu')
+      User.create(name: 'aye')
       session[:author_id] = 1
       get :index
     end
@@ -11,7 +11,7 @@ RSpec.describe LogsController, type: :controller do
   end
   describe 'GET #individual' do
     before do
-      User.create(name: 'kalu')
+      User.create(name: 'aye')
       session[:author_id] = 1
       get :external
     end
@@ -22,7 +22,7 @@ RSpec.describe LogsController, type: :controller do
   end
   describe 'Post #create' do
     before do
-      User.create(name: 'kalu')
+      User.create(name: 'aye')
       session[:author_id] = 1
     end
   end
