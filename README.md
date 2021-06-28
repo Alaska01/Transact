@@ -38,7 +38,7 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 ## Live Demo
 
-- [Live Demo Link](https://stormy-atoll-51233.herokuapp.com/)
+- [Live Demo Link](https://ayerorcapstone.herokuapp.com/)
 
 ## Built With
 
@@ -66,6 +66,8 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 - Run `rails db:migrate`
 - Run Start up you server with `rails s`
 - Open http://localhost:3000/ in your browser.
+- You may need to delete your gem lock file and run the command `bundle install`
+  -Depending on your OS and ruby version manager, you may need to follow the prompt or request your browser may be showing you to handle system perculiar issues.
 
 ### Testing
 
