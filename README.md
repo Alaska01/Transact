@@ -20,7 +20,7 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 - All my transactions.
 - All my external transactions.
-- All groups..
+- All groups.
 
 ### When user opens "All My Transaction Amount Page" :
 
