@@ -38,7 +38,8 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 ## Live Demo
 
-- [Live Demo Link](https://ayerorcapstone.herokuapp.com/)
+- [Live Demo Link](https://ayerorcapstone.herokuapp.com/) -[Video](https://ayerorcapstone.herokuapp.com/)
+  -While testing the live app, it is expected that the tester test the applications with pictures at his end because this app is hosted on heroku without subscription, hence once the dyno is down the images would not display, except it is fired up. So kindly help upload group images of your choice while carrying out the testing.
 
 ## Built With
 
