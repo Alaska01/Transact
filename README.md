@@ -20,7 +20,7 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 - All my transactions.
 - All my external transactions.
-- All groups.
+- All groups..
 
 ### When user opens "All My Transaction Amount Page" :
 
@@ -32,17 +32,16 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 ### When user opens "All groups" page:
 
-- A list of all groups is displayed  in alphabetical order.
+- A list of all groups is displayed in alphabetical order.
 - Each group displays its icon and name.
 - An action button "New Group" is displayed.
-
 
 ## Live Demo
 
 - [Live Demo Link](https://stormy-atoll-51233.herokuapp.com/)
 
-
 ## Built With
+
 - Rails
 - Ruby
 - HTML
@@ -53,7 +52,7 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 ### Prerequisites
 
-- Ruby: 2.7.1 
+- Ruby: 2.7.1
 - Rails: 6.1.0
 
 ### Install and Setup
@@ -69,6 +68,7 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 - Open http://localhost:3000/ in your browser.
 
 ### Testing
+
 - Open a terminal and run `rspec`.
 
 ## Author
@@ -77,7 +77,7 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 - Github: [Github](https://github.com/Alaska01)
 - Twitter: [Twitter](https://twitter.com/AyeAsoo)
-- E-mail: <a href="mailto:aadaniel108@gmail.com?subject=Hello Daniel!">Email</a>  
+- E-mail: <a href="mailto:aadaniel108@gmail.com?subject=Hello Daniel!">Email</a>
 - Linkedin: [Linkedin](https://www.linkedin.com/in/daniel-asoo-aye/)
 
 ## 🤝 Contributing
@@ -92,6 +92,6 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - Stack-overflow
-[Design By: Gregoire Vella on Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
+  [Design By: Gregoire Vella on Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
 
 ## 📝 License
