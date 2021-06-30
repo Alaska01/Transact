@@ -1,8 +1,8 @@
 <% provide(:title, 'All Groups') %>
 <div class="pagination"><%= will_paginate @groups%></div>
-<% @groups.each do |group| %>
+<% @groups.all.includes(image_attachment: :blob).each do |group| %>
 
-<div class="group-div">
+<div class="group-div group-styles">
 <div>
 <%= image_tag group.display_image if group.image.attached? %>
 </div>

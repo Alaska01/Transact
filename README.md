@@ -1,4 +1,4 @@
-# README
+# TRANSACTION APP
 
 ![screenshot](app/assets/images/capstone.png)
 

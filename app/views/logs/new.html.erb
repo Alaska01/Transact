@@ -1,12 +1,14 @@
 <% provide(:title, 'New Transaction Log') %>
 
     <%= form_with(model: @log) do |f| %>
+
         <%= render 'shared/log_error_messages' %>
+       
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control', placeholder: "Enter Name Of Transaction" %>
 
       <%= f.label :amount %>
-      <%= f.text_field :amount, class: 'form-control', placeholder: "Enter Amount In Dollars" %>
+      <%= f.number_field :amount, data: { numeric: true }, class: 'form-control', placeholder: "Enter Amount In Dollars Only Numbers " %>
       <%= f.label :group_id %>
       <%= f.select :group_id, options_from_collection_for_select(@groups, :id, :name), {:include_blank => 'Select A Group (Optional)'}, {class: "form-control"} %>
 

@@ -24,7 +24,7 @@ class LogsController < ApplicationController
       flash[:success] = 'Your log for this group has been created.' if @log_group.save
       redirect_to logs_path
     else
-      flash[:danger] = 'Please try again.'
+      flash.now[:danger] = 'Please try again.'
       render 'new'
     end
   end

@@ -17,9 +17,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = 'Welcome to the Transaction App!'
+      flash.now[:success] = 'Welcome to the Transaction App!'
       redirect_to @user
     else
+      flash.now[:success] = 'Sign up properly pls!'
       render 'new'
     end
   end

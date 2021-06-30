@@ -6,8 +6,9 @@
         <title><%= yield(:title) %> | Transaction App </title>
     </head>
 
-    <div class="center jumbotron">
+    
         <body>
+        <div class="center jumbotron">
        
         <% if logged_in? %>
             <h1>Transaction App</h1>
@@ -18,20 +19,22 @@
             </p>
             
         <% else %>
+
+        <h1>Transaction App</h1>
+        <p>
+        This is the home page for the
+        <a href="#">Transaction App</a>
+        For Light Transactions and Groupings.
+        </p>
+
+        
+    
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <% end %>
+</div>
             
         </body>
 
-        <h1>Transaction App</h1>
-            <p>
-            This is the home page for the
-            <a href="#">Transaction App</a>
-            For Light Transactions and Groupings.
-            </p>
-
-            
-        
-        <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-        <% end %>
-    </div>
+       
    
 </html>
