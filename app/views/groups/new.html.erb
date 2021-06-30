@@ -1,7 +1,6 @@
 <% provide(:title, 'New Group') %>
 
     <%= form_for(@group) do |f| %>
-      <%= render "shared/group_error_messages" %>
         <%= f.label :image %>
         <%= f.file_field :image %>
       <%= f.label :name %>

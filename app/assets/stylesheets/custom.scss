@@ -33,6 +33,7 @@ body {
   height: 100%;
   width: 100%;
   padding-top: 100px;
+
   .notice {
     color: red;
     text-align: center;
@@ -98,12 +99,14 @@ select,
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
+
   @include box_sizing;
 }
 
 #error_explanation {
   color: red;
   margin-top: 50px;
+
   ul {
     color: red;
     margin: 0 0 30px 0;

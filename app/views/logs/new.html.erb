@@ -1,8 +1,6 @@
 <% provide(:title, 'New Transaction Log') %>
 
     <%= form_with(model: @log) do |f| %>
-
-        <%= render 'shared/log_error_messages' %>
        
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control', placeholder: "Enter Name Of Transaction" %>
