@@ -12,7 +12,7 @@ This is the capstone project of the Microverse Ruby on Rails curriculum. It is b
 
 - Users can create a trading without a group
 
-- Users can create, edit and delete .
+- Users can create, edit and delete
 
 ## Description:
 
