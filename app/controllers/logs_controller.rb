@@ -9,7 +9,6 @@ class LogsController < ApplicationController
   def individual
     @logs = Log.includes(:groups).where(author_id: current_user.id)
     @logs = @logs.order('created_at DESC').reject { |log| log.groups.exists? }
-    
   end
 
   def excluding

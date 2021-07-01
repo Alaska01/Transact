@@ -40,10 +40,6 @@ module ApplicationHelper
     sum
   end
 
-  def total_sum_b(sum)
-  
-  end
-
   def group_img_helper(log)
     html = ''
     html << group_img(log.groups.first) unless log.groups.first.nil?
