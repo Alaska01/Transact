@@ -8,7 +8,7 @@
 <p><small>Created At: <%= log.created_at.strftime("%d-%m-%y") %></small></p>
 <h5><strong>Money Spent: <%= hours(log) %> dollars </strong></h5>
 </div>
-<%= group_img(log.groups.first) unless log.groups.first.nil?%>
+
 <%= link_to "View Group", group_path(log.groups.first) unless log.groups.first.nil? %>
 </div>
 <% end %>

@@ -17,4 +17,5 @@ Rails.application.routes.draw do
 
   resources   :logs, only: [:index, :individual, :new, :create]
   get         '/individual',    to:   'logs#individual'
+  get         '/excluding',    to:   'logs#excluding'
 end

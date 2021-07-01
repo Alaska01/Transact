@@ -1,0 +1,14 @@
+<% provide(:title, 'All My Amount in $') %>
+
+<% group_hours = 0 %>
+
+<% @logs.each do |log| %>
+    <h3><strong><%= log.name %></strong></h3>
+    <p><small>Created At: <%= log.created_at.strftime("%d-%m-%y") %></small></p>
+    <h5><strong>Amount Spent: <%= hours(log) %> dollars </strong></h5>
+    <%= group_img_helper(log)%>
+    <% group_hours += hours(log) %>
+<% end %>
+
+<h4><strong>My Total Amount Spent in $:</strong> <%= group_hours %></h4>
+

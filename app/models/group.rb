@@ -9,6 +9,6 @@ class Group < ApplicationRecord
   has_one_attached :image
 
   def display_image
-    image.variant(resize_to_limit: [100, 100])
+    image.variant(resize_to_limit: [150, 150])
   end
 end

@@ -40,8 +40,8 @@ module ApplicationHelper
     sum
   end
 
-  def total_minutes(sum)
-    sum % 60
+  def total_sum_b(sum)
+  
   end
 
   def group_img_helper(log)
