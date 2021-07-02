@@ -1,0 +1,22 @@
+<% provide(:title, 'All Groups') %>
+<div class="pagination"><%= will_paginate @groups%></div>
+<% @groups.all.includes(image_attachment: :blob).each do |group| %>
+
+<div class="group-div group-styles">
+<div>
+<%= image_tag group.display_image if group.image.attached? %>
+</div>
+<div>
+<h3><%= group.name %></h3>
+<h5><%= link_to "See Group", group_path(group)%></h5>
+<p><small>Created At: <%= group.created_at.strftime("%d-%m-%y") %></small></p>
+</div>
+</div>
+<% end %>
+<div class="pagination"><%= will_paginate @groups%></div>
+<div class="create-group">
+<% if logged_in? %>
+<%= link_to "Create New Group", new_group_path, class: "create-group-link"%>
+<% end %>
+</div>
+<div class="create-pad"></div>

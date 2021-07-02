@@ -1,0 +1,16 @@
+<% provide(:title, 'New Transaction Log') %>
+
+    <%= form_with(model: @log) do |f| %>
+       
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Enter Name Of Transaction" %>
+
+      <%= f.label :amount %>
+      <%= f.number_field :amount, data: { numeric: true }, class: 'form-control', placeholder: "Enter Amount In Dollars Only Numbers " %>
+      <%= f.label :group_id %>
+      <%= f.select :group_id, options_from_collection_for_select(@groups, :id, :name), {:include_blank => 'Select A Group (Optional)'}, {class: "form-control"} %>
+
+      <%= f.submit "Create New Transaction", class: "btn btn-primary new-log-btn" %>
+    <% end %>
+
+<%= link_to "Cancel", user_path(current_user), class:"btn btn-danger new-log-btn"%>

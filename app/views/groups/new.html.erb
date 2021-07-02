@@ -1,0 +1,12 @@
+<% provide(:title, 'New Group') %>
+
+    <%= form_for(@group) do |f| %>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Give Your Group A Name" %>
+
+      <%= f.submit "Create Group", class: "btn btn-primary new-log-btn" %>
+    <% end %>
+
+    <%= link_to "Cancel", user_path(current_user), class: "btn btn-danger new-log-btn"%>

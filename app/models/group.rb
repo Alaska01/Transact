@@ -1,5 +1,14 @@
 class Group < ApplicationRecord
-    belongs_to :user
-    has_many :transactions, :through => :group_transactions
-    validates :name, presence: true
+  belongs_to :user
+  validates :name, presence: true, length: { maximum: 15, minimum: 5 },
+                   uniqueness: { case_sensitive: true }
+  validates :user_id, presence: true
+
+  has_many :log_groups
+  has_many :logs, through: :log_groups
+  has_one_attached :image
+
+  def display_image
+    image.variant(resize_to_limit: [150, 150])
+  end
 end

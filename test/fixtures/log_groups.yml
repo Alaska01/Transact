@@ -2,8 +2,8 @@
 
 one:
   group: one
-  transaction: one
+  log: one
 
 two:
   group: two
-  transaction: two
+  log: two

@@ -2,16 +2,38 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<title><%= yield(:title) %> | Transaction App </title>
-</head>
-<body>
-<h1>Transaction App</h1>
-<p>
-This is the home page for the
-<a href="#">Transaction App</a>
-For Light Transactions and Groupings.
-</p>
+    <head>
+        <title><%= yield(:title) %> | Transaction App </title>
+    </head>
 
-</body>
+    <body>
+        <div class="center jumbotron">
+       
+        <% if logged_in? %>
+            <h1>Transaction App</h1>
+            <p>
+            This is the home page for the
+           Transaction App
+            For Light Transactions and Groupings. Click <%= link_to "Here", current_user %> for User's transaction page.
+            </p>
+            
+        <% else %>
+
+        <h1>Transaction App</h1>
+        <p>
+        This is the home page for the
+        <a href="#">Transaction App</a>
+        For Light Transactions and Groupings.
+        </p>
+
+        
+    
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <% end %>
+    </div>
+            
+    </body>
+
+       
+   
 </html>
